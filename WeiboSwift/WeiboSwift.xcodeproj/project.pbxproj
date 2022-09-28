@@ -8,22 +8,30 @@
 
 /* Begin PBXBuildFile section */
 		7912C6AE28E305C100714377 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7912C6AD28E305C100714377 /* AppDelegate.swift */; };
-		7912C6B028E305C100714377 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7912C6AF28E305C100714377 /* SceneDelegate.swift */; };
-		7912C6B228E305C100714377 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7912C6B128E305C100714377 /* ViewController.swift */; };
 		7912C6B528E305C100714377 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7912C6B328E305C100714377 /* Main.storyboard */; };
 		7912C6B728E305C200714377 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7912C6B628E305C200714377 /* Assets.xcassets */; };
 		7912C6BA28E305C200714377 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7912C6B828E305C200714377 /* LaunchScreen.storyboard */; };
+		7912C6CC28E30BF000714377 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7912C6CB28E30BF000714377 /* MainTabBarController.swift */; };
+		7912C6CE28E30C6800714377 /* HomeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7912C6CD28E30C6800714377 /* HomeTableViewController.swift */; };
+		7912C6D028E30C7500714377 /* MessageTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7912C6CF28E30C7500714377 /* MessageTableViewController.swift */; };
+		7912C6D228E30C7D00714377 /* DiscoverTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7912C6D128E30C7D00714377 /* DiscoverTableViewController.swift */; };
+		7912C6D428E30C8B00714377 /* ProfileTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7912C6D328E30C8B00714377 /* ProfileTableViewController.swift */; };
+		7912C6D628E3E4A400714377 /* UIButton+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7912C6D528E3E4A400714377 /* UIButton+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		7912C6AA28E305C100714377 /* WeiboSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeiboSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7912C6AD28E305C100714377 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		7912C6AF28E305C100714377 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		7912C6B128E305C100714377 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		7912C6B428E305C100714377 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		7912C6B628E305C200714377 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7912C6B928E305C200714377 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7912C6BB28E305C200714377 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7912C6CB28E30BF000714377 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
+		7912C6CD28E30C6800714377 /* HomeTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewController.swift; sourceTree = "<group>"; };
+		7912C6CF28E30C7500714377 /* MessageTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageTableViewController.swift; sourceTree = "<group>"; };
+		7912C6D128E30C7D00714377 /* DiscoverTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverTableViewController.swift; sourceTree = "<group>"; };
+		7912C6D328E30C8B00714377 /* ProfileTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileTableViewController.swift; sourceTree = "<group>"; };
+		7912C6D528E3E4A400714377 /* UIButton+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,14 +65,98 @@
 			isa = PBXGroup;
 			children = (
 				7912C6AD28E305C100714377 /* AppDelegate.swift */,
-				7912C6AF28E305C100714377 /* SceneDelegate.swift */,
-				7912C6B128E305C100714377 /* ViewController.swift */,
+				7912C6C128E30B7900714377 /* Classes */,
 				7912C6B328E305C100714377 /* Main.storyboard */,
 				7912C6B628E305C200714377 /* Assets.xcassets */,
 				7912C6B828E305C200714377 /* LaunchScreen.storyboard */,
 				7912C6BB28E305C200714377 /* Info.plist */,
 			);
 			path = WeiboSwift;
+			sourceTree = "<group>";
+		};
+		7912C6C128E30B7900714377 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				7912C6C428E30B7900714377 /* Model */,
+				7912C6C528E30B7900714377 /* View */,
+				7912C6C228E30B7900714377 /* ViewModel */,
+				7912C6C328E30B7900714377 /* Tools */,
+			);
+			path = Classes;
+			sourceTree = SOURCE_ROOT;
+		};
+		7912C6C228E30B7900714377 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		7912C6C328E30B7900714377 /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				7912C6D528E3E4A400714377 /* UIButton+Extension.swift */,
+			);
+			path = Tools;
+			sourceTree = "<group>";
+		};
+		7912C6C428E30B7900714377 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		7912C6C528E30B7900714377 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				7912C6CA28E30B7900714377 /* Main */,
+				7912C6C628E30B7900714377 /* Home */,
+				7912C6C828E30B7900714377 /* Message */,
+				7912C6C728E30B7900714377 /* Discover */,
+				7912C6C928E30B7900714377 /* Profile */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		7912C6C628E30B7900714377 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				7912C6CD28E30C6800714377 /* HomeTableViewController.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		7912C6C728E30B7900714377 /* Discover */ = {
+			isa = PBXGroup;
+			children = (
+				7912C6D128E30C7D00714377 /* DiscoverTableViewController.swift */,
+			);
+			path = Discover;
+			sourceTree = "<group>";
+		};
+		7912C6C828E30B7900714377 /* Message */ = {
+			isa = PBXGroup;
+			children = (
+				7912C6CF28E30C7500714377 /* MessageTableViewController.swift */,
+			);
+			path = Message;
+			sourceTree = "<group>";
+		};
+		7912C6C928E30B7900714377 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				7912C6D328E30C8B00714377 /* ProfileTableViewController.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		7912C6CA28E30B7900714377 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				7912C6CB28E30BF000714377 /* MainTabBarController.swift */,
+			);
+			path = Main;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,9 +230,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7912C6B228E305C100714377 /* ViewController.swift in Sources */,
+				7912C6D428E30C8B00714377 /* ProfileTableViewController.swift in Sources */,
+				7912C6CE28E30C6800714377 /* HomeTableViewController.swift in Sources */,
+				7912C6CC28E30BF000714377 /* MainTabBarController.swift in Sources */,
+				7912C6D028E30C7500714377 /* MessageTableViewController.swift in Sources */,
+				7912C6D228E30C7D00714377 /* DiscoverTableViewController.swift in Sources */,
 				7912C6AE28E305C100714377 /* AppDelegate.swift in Sources */,
-				7912C6B028E305C100714377 /* SceneDelegate.swift in Sources */,
+				7912C6D628E3E4A400714377 /* UIButton+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -290,16 +386,18 @@
 				DEVELOPMENT_TEAM = LR67P8T25Q;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = WeiboSwift/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "新浪博博";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.anhuiyizhen.WeiboSwift;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -318,16 +416,18 @@
 				DEVELOPMENT_TEAM = LR67P8T25Q;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = WeiboSwift/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "新浪博博";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.anhuiyizhen.WeiboSwift;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
