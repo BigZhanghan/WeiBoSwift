@@ -19,10 +19,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         window?.rootViewController = MainTabBarController()
         
+        setupAppearence()
+        
         window?.makeKeyAndVisible()
         
         return true
     }
-
+    
+    private func setupAppearence() {
+        UITabBar.appearance().tintColor = mainAppearance
+        UINavigationBar.appearance().tintColor = mainAppearance
+    }
 }
 
