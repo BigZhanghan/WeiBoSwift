@@ -7,6 +7,7 @@
 
 import UIKit
 import WebKit
+import Toast_Swift
 
 class OAuthViewController: UIViewController {
     
@@ -41,6 +42,10 @@ class OAuthViewController: UIViewController {
         "document.getElementById('loginPassword').value = 'jnr#0710';"
         webView.evaluateJavaScript(js)
     }
+    
+    deinit {
+        print("deinit")
+    }
 }
 
 // MARK: - WKNavigationDelegate
@@ -62,11 +67,40 @@ extension OAuthViewController: WKNavigationDelegate {
         let code = String(query["code=".endIndex...])
         print(code)
         
-        NetwokAPI.loadAccessToken(code) { res in
-            print(res)
+        UserAccountViewModel.shared.loadAccesToken(code) { isSuccess in
+            print(Thread.current)
+            if !isSuccess {
+                self.webView.makeToast("授权失败")
+                DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + .seconds(1), execute: {
+                    print(Thread.current)
+                    self.dismiss(animated: true)
+                })
+                return
+            }
+            
+            print("授权成功")
+            
+            self.dismiss(animated: false) {
+                NotificationCenter.default.post(name: Notification.Name(SwitchRootViewControllerNotification), object: "welcome")
+            }
         }
         
         decisionHandler(.cancel)
+    }
+    
+    // MARK: - 页面开始加载
+    func webView(_ webView: WKWebView, didStartProvisionalNavigation navigation: WKNavigation!) {
+        self.webView.makeToastActivity(.center)
+    }
+    
+    // MARK: - 页面加载完成
+    func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
+        self.webView.hideToastActivity()
+    }
+    
+    // MARK: - 页面加载失败
+    func webView(_ webView: WKWebView, didFailProvisionalNavigation navigation: WKNavigation!, withError error: Error) {
+        self.webView.hideToastActivity()
     }
 }
 

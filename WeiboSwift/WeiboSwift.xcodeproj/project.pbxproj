@@ -13,7 +13,13 @@
 		7912C6B528E305C100714377 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7912C6B328E305C100714377 /* Main.storyboard */; };
 		7912C6B728E305C200714377 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7912C6B628E305C200714377 /* Assets.xcassets */; };
 		7912C6BA28E305C200714377 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7912C6B828E305C200714377 /* LaunchScreen.storyboard */; };
+		796D4B5628F6543F003B9547 /* NewFeatureCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 796D4B5528F6543F003B9547 /* NewFeatureCollectionViewController.swift */; };
+		796D4B5828F6738C003B9547 /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 796D4B5728F6738C003B9547 /* WelcomeViewController.swift */; };
 		79C7128B28F2BAE200F65CDF /* TestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79C7128A28F2BAE200F65CDF /* TestModel.swift */; };
+		79C7128D28F3AB7100F65CDF /* JsonUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79C7128C28F3AB7100F65CDF /* JsonUtil.swift */; };
+		79C7129028F3ABEA00F65CDF /* BaseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79C7128F28F3ABEA00F65CDF /* BaseModel.swift */; };
+		79C7129328F3B4C800F65CDF /* UserAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79C7129228F3B4C800F65CDF /* UserAccount.swift */; };
+		79C7129628F43BF000F65CDF /* UserAccountViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79C7129528F43BF000F65CDF /* UserAccountViewModel.swift */; };
 		79D5F90928E5AFF700C9976F /* UIImageView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D5F8F628E5AFF700C9976F /* UIImageView+Extension.swift */; };
 		79D5F90A28E5AFF700C9976F /* UILabel+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D5F8F728E5AFF700C9976F /* UILabel+Extension.swift */; };
 		79D5F90B28E5AFF700C9976F /* UIButton+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D5F8F828E5AFF700C9976F /* UIButton+Extension.swift */; };
@@ -37,7 +43,13 @@
 		7912C6B628E305C200714377 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7912C6B928E305C200714377 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7912C6BB28E305C200714377 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		796D4B5528F6543F003B9547 /* NewFeatureCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewFeatureCollectionViewController.swift; sourceTree = "<group>"; };
+		796D4B5728F6738C003B9547 /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		79C7128A28F2BAE200F65CDF /* TestModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestModel.swift; sourceTree = "<group>"; };
+		79C7128C28F3AB7100F65CDF /* JsonUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JsonUtil.swift; sourceTree = "<group>"; };
+		79C7128F28F3ABEA00F65CDF /* BaseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseModel.swift; sourceTree = "<group>"; };
+		79C7129228F3B4C800F65CDF /* UserAccount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAccount.swift; sourceTree = "<group>"; };
+		79C7129528F43BF000F65CDF /* UserAccountViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAccountViewModel.swift; sourceTree = "<group>"; };
 		79D5F8F628E5AFF700C9976F /* UIImageView+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImageView+Extension.swift"; sourceTree = "<group>"; };
 		79D5F8F728E5AFF700C9976F /* UILabel+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UILabel+Extension.swift"; sourceTree = "<group>"; };
 		79D5F8F828E5AFF700C9976F /* UIButton+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIButton+Extension.swift"; sourceTree = "<group>"; };
@@ -113,12 +125,45 @@
 			path = WeiboSwift;
 			sourceTree = "<group>";
 		};
+		796D4B5428F65414003B9547 /* NewFeature */ = {
+			isa = PBXGroup;
+			children = (
+				796D4B5528F6543F003B9547 /* NewFeatureCollectionViewController.swift */,
+				796D4B5728F6738C003B9547 /* WelcomeViewController.swift */,
+			);
+			path = NewFeature;
+			sourceTree = "<group>";
+		};
 		79C7128928F2BAD200F65CDF /* Test */ = {
 			isa = PBXGroup;
 			children = (
 				79C7128A28F2BAE200F65CDF /* TestModel.swift */,
 			);
 			path = Test;
+			sourceTree = "<group>";
+		};
+		79C7128E28F3ABDD00F65CDF /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				79C7128F28F3ABEA00F65CDF /* BaseModel.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		79C7129128F3B41400F65CDF /* OAuth */ = {
+			isa = PBXGroup;
+			children = (
+				79C7129228F3B4C800F65CDF /* UserAccount.swift */,
+			);
+			path = OAuth;
+			sourceTree = "<group>";
+		};
+		79C7129428F43BD900F65CDF /* OAuth */ = {
+			isa = PBXGroup;
+			children = (
+				79C7129528F43BF000F65CDF /* UserAccountViewModel.swift */,
+			);
+			path = OAuth;
 			sourceTree = "<group>";
 		};
 		79D5F8F328E5AFF700C9976F /* Classes */ = {
@@ -135,6 +180,7 @@
 		79D5F8F428E5AFF700C9976F /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				79C7129428F43BD900F65CDF /* OAuth */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -147,6 +193,7 @@
 				79D5F8F728E5AFF700C9976F /* UILabel+Extension.swift */,
 				79D5F8F828E5AFF700C9976F /* UIButton+Extension.swift */,
 				79D5F8F928E5AFF700C9976F /* Common.swift */,
+				79C7128C28F3AB7100F65CDF /* JsonUtil.swift */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -154,6 +201,8 @@
 		79D5F8FA28E5AFF700C9976F /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				79C7129128F3B41400F65CDF /* OAuth */,
+				79C7128E28F3ABDD00F65CDF /* Base */,
 				79C7128928F2BAD200F65CDF /* Test */,
 			);
 			path = Model;
@@ -210,6 +259,7 @@
 				7912C6B328E305C100714377 /* Main.storyboard */,
 				7912C6B828E305C200714377 /* LaunchScreen.storyboard */,
 				79D5F90528E5AFF700C9976F /* MainTabBarController.swift */,
+				796D4B5428F65414003B9547 /* NewFeature */,
 				79D5F90628E5AFF700C9976F /* Visitor */,
 			);
 			path = Main;
@@ -365,14 +415,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				79C7129028F3ABEA00F65CDF /* BaseModel.swift in Sources */,
 				79D5F91028E5AFF700C9976F /* ProfileTableViewController.swift in Sources */,
 				79D5F90E28E5AFF700C9976F /* DiscoverTableViewController.swift in Sources */,
 				79D5F91928E5BFBF00C9976F /* NetworkTools.swift in Sources */,
 				79D5F91228E5AFF700C9976F /* VisitorTableViewController.swift in Sources */,
+				79C7129628F43BF000F65CDF /* UserAccountViewModel.swift in Sources */,
+				79C7129328F3B4C800F65CDF /* UserAccount.swift in Sources */,
+				796D4B5628F6543F003B9547 /* NewFeatureCollectionViewController.swift in Sources */,
 				7904DFA328F122E3007D49FA /* OAuthViewController.swift in Sources */,
 				79D5F91328E5AFF700C9976F /* VisitorView.swift in Sources */,
+				79C7128D28F3AB7100F65CDF /* JsonUtil.swift in Sources */,
 				79D5F91128E5AFF700C9976F /* MainTabBarController.swift in Sources */,
 				79D5F90D28E5AFF700C9976F /* HomeTableViewController.swift in Sources */,
+				796D4B5828F6738C003B9547 /* WelcomeViewController.swift in Sources */,
 				79D5F90928E5AFF700C9976F /* UIImageView+Extension.swift in Sources */,
 				79D5F90B28E5AFF700C9976F /* UIButton+Extension.swift in Sources */,
 				7912C6AE28E305C100714377 /* AppDelegate.swift in Sources */,
@@ -542,7 +598,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.0;
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.anhuiyizhen.WeiboSwift;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -573,7 +629,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.0;
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.anhuiyizhen.WeiboSwift;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;

@@ -12,5 +12,7 @@ extension UIImageView {
         self.init()
         
         image = UIImage(named: imageName)
+        
+        sizeToFit()
     }
 }

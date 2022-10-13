@@ -11,7 +11,7 @@ class VisitorTableViewController: UITableViewController {
     
     var visitorView: VisitorView?
     
-    private var userLogin = false
+    private var userLogin = false //UserAccountViewModel.shared.userLogin
     
     override func loadView() {
         userLogin ? super.loadView() : setupVisitorView()
@@ -19,10 +19,6 @@ class VisitorTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        NetwokAPI.testAPIGet { res in }
-        
-        NetwokAPI.testAPIPost { res in }
     }
     
     private func setupVisitorView() {
@@ -46,7 +42,7 @@ extension VisitorTableViewController: VisitorViewDelegate {
         print("VisitorTableViewController + 登录")
         let oauth = OAuthViewController()
         let nav = UINavigationController(rootViewController: oauth)
-        nav.modalPresentationStyle =  .fullScreen
+        nav.modalPresentationStyle = .fullScreen
         present(nav, animated: true)
     }
 }

@@ -25,5 +25,7 @@ extension UIButton {
         setTitleColor(color, for: .normal)
         setBackgroundImage(UIImage(named: backImage), for: .normal)
         titleLabel?.font = UIFont.systemFont(ofSize: 15)
+        
+        sizeToFit()
     }
 }

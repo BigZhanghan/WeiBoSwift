@@ -7,4 +7,6 @@
 
 import UIKit
 
-let mainAppearance: UIColor = .orange
+let MainAppearance: UIColor = .orange
+
+let SwitchRootViewControllerNotification = "switchRootViewControllerNotification"
