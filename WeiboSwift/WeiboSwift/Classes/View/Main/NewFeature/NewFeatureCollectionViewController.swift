@@ -77,8 +77,7 @@ private class NewFeatureCell: UICollectionViewCell {
             startBtn.isHidden = true
         }
     }
-    
-    private var startBtn: UIButton = UIButton("开始体验", .white, "new_feature_finish_button")
+    private var startBtn: UIButton = UIButton(title: "开始体验", color: .white, backImage: "new_feature_finish_button")
     
     override init(frame: CGRect) {
         super.init(frame: frame)

@@ -19,13 +19,23 @@ extension UIButton {
         sizeToFit()
     }
     
-    convenience init(_ title: String, _ color: UIColor, _ backImage: String) {
+    convenience init(title: String, color: UIColor, backImage: String) {
         self.init()
         setTitle(title, for: .normal)
         setTitleColor(color, for: .normal)
         setBackgroundImage(UIImage(named: backImage), for: .normal)
         titleLabel?.font = UIFont.systemFont(ofSize: 15)
         
+        sizeToFit()
+    }
+    
+    convenience init(title: String, color: UIColor, image: String) {
+        self.init()
+        setTitle(title, for: .normal)
+        setTitleColor(color, for: .normal)
+        setImage(UIImage(named: image), for: .normal)
+        titleLabel?.font = UIFont.systemFont(ofSize: 12)
+
         sizeToFit()
     }
 }

@@ -11,7 +11,7 @@ class VisitorTableViewController: UITableViewController {
     
     var visitorView: VisitorView?
     
-    private var userLogin = false //UserAccountViewModel.shared.userLogin
+    private var userLogin = UserAccountViewModel.shared.userLogin
     
     override func loadView() {
         userLogin ? super.loadView() : setupVisitorView()
@@ -24,6 +24,7 @@ class VisitorTableViewController: UITableViewController {
     private func setupVisitorView() {
         visitorView = VisitorView()
         view = visitorView
+        view.backgroundColor = BackColor
         
         visitorView?.delegate = self
         

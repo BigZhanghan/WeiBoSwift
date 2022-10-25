@@ -18,6 +18,13 @@ class UserAccountViewModel {
         return (path as NSString).appendingPathComponent("account.plist")
     }
     
+    var accessToken: String? {
+        if !isExpire {
+            return account?.accessToken
+        }
+        return nil
+    }
+    
     private var isExpire: Bool {
         if account?.expiresDate?.compare(Date()) == .orderedDescending {
             return false
@@ -72,7 +79,7 @@ extension UserAccountViewModel {
     }
     
     private func getUerInfo(_ account: UserAccount, _ finished: @escaping (_ isSuccess: Bool) -> ()) {
-        NetwokAPI.loadUserInfo(account.accessToken!, account.uid!) { (res, err) in
+        NetwokAPI.loadUserInfo(account.uid!) { (res, err) in
             guard let dict = res as? [String: Any] else {
                 finished(false)
                 return

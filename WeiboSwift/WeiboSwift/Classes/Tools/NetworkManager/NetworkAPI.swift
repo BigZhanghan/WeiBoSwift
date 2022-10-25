@@ -12,6 +12,14 @@ class NetwokAPI {
     private static let appKey = "161276545"
     private static let appSecret = "78963ed930e43112715691013d4dc182"
     private static let redirectUrl = "http://www.baidu.com"
+    
+    private static var tokenDict: [String: Any]? {
+        if let token = UserAccountViewModel.shared.accessToken {
+            return ["access_token": token]
+        }
+        
+        return nil
+    }
 }
 
 // MARK: - TestAPI
@@ -63,12 +71,16 @@ extension NetwokAPI {
     
     /// OAuth授权完成获取用户信息
     /// - see: [https://open.weibo.com/wiki/2/users/show](https://open.weibo.com/wiki/2/users/show)
-    static func loadUserInfo(_ accessToken: String, _ uid : String, _ completion: @escaping (Any?, Error?) -> ()) {
+    static func loadUserInfo(_ uid : String, _ completion: @escaping (Any?, Error?) -> ()) {
+        
+        guard var params = tokenDict else {
+            // 字典tokenDict为nil，token失效
+            return
+        }
+        
         let url = "https://api.weibo.com/2/users/show.json"
-        let params = [
-            "access_token": accessToken,
-            "uid": uid
-        ]
+        params["uid"] = uid
+
         NetworkTools.shared.get(url, params) { (result, err) in
             if err != nil {
                 completion(nil, err)
@@ -79,4 +91,29 @@ extension NetwokAPI {
         }
     }
     
+}
+
+// MARK: - 微博信息
+extension NetwokAPI {
+    /// 加载微博首页列表数据
+    /// - see: [https://open.weibo.com/wiki/2/statuses/home_timeline](https://open.weibo.com/wiki/2/statuses/home_timeline)
+    static func loadHomeList(_ completion: @escaping (Any?, Error?) -> ()) {
+        
+        guard let params = tokenDict else {
+            // 字典tokenDict为nil，token失效
+            return
+        }
+        
+        let url = "https://api.weibo.com/2/statuses/home_timeline.json"
+        
+        NetworkTools.shared.get(url, params) { result, err in
+            
+            if err != nil {
+                completion(nil, err)
+                return
+            }
+            
+            completion(result, nil)
+        }
+    }
 }

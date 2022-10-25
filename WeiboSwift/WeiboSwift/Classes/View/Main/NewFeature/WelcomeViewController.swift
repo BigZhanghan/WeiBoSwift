@@ -20,7 +20,7 @@ class WelcomeViewController: UIViewController {
         return avatar
     }()
     
-    private lazy var welcomeLabel: UILabel = UILabel("欢迎回来", 18)
+    private lazy var welcomeLabel: UILabel = UILabel(title: "欢迎回来", fontSize: 18)
     
     override func loadView() {
         view = bgImageView
